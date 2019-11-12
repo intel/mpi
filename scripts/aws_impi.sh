@@ -23,10 +23,10 @@
 
 #!/bin/bash
 
-expected_impi_versions="2019.5"
+expected_impi_versions="2019.5 2019.6"
 
 impi_major_version=2019
-impi_minor_version=5
+impi_minor_version=6
 impi_symlink="/opt/intel/impi/latest"
 has_intel64_level=1
 
@@ -275,9 +275,9 @@ function install_impi()
     previous_impi_installations=""
     if [ "$is_ubuntu" == "1" ];
     then
-        previous_impi_installations=$(sudo apt list --installed | grep -i "${impi_package_prefix}-*")
+        previous_impi_installations=$(sudo apt list --installed 2>&1 | grep -i "${impi_package_prefix}-*")
     else
-        previous_impi_installations=$(sudo yum list installed ${impi_package_prefix}-* | grep "${impi_package_prefix}")
+        previous_impi_installations=$(sudo yum list installed ${impi_package_prefix}-* 2>&1 | grep "${impi_package_prefix}")
     fi
 
     if [ "$previous_impi_installations" != "" ];
