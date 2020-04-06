@@ -4,7 +4,10 @@ You can automatically get the latest deployment scripts and more by using the au
 The feature is enabled when you run the scripts/aws_impi.sh deployment script for Intel® MPI Library. 
 
 ## Usage ##
+###aws_impi.sh###
 This script is for AWS [Elastic Fabric Adapter ( EFA)](https://aws.amazon.com/hpc/efa/) - enabled instances. Refer to [Getting Started with EFAs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa-start.html#efa-start-impi) for instructions on running the scripts/aws_impi.sh deployment script.
+###dir_structure_legacy.sh###
+We have updated the installation path structure in Intel MPI Library 2019.  If you encounter problems related to this change, use the attached script to restore the legacy path structure while you update your code to utilize the new path structure.
 
 ## License ##
 This software is covered by the MIT License, which is included in the script header.
