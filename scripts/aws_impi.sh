@@ -23,10 +23,10 @@
 
 #!/bin/bash
 
-expected_impi_versions="2019.5 2019.6 2019.7"
+expected_impi_versions="2019.5 2019.6 2019.7 2019.8"
 
 impi_major_version=2019
-impi_minor_version=7
+impi_minor_version=8
 impi_symlink="/opt/intel/impi/latest"
 has_intel64_level=1
 
