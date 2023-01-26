@@ -1,7 +1,3 @@
-# DISCONTINUATION OF PROJECT #
-This project will no longer be maintained by Intel.
-Intel has ceased development and contributions including, but not limited to, maintenance, bug fixes, new releases, or updates, to this project.
-Intel no longer accepts patches to this project.
 # Intel® MPI Library auxiliary files storage
 
 You can automatically get the latest deployment scripts and more by using the auxiliary file storage feature of the [Intel® MPI Library](https://software.intel.com/en-us/mpi-library). 
