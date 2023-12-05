@@ -1,5 +1,7 @@
 # Intel® MPI Library auxiliary files storage
 
+This repository contains auxiliary scripts which help with Intel MPI deployment in different environments.
+
 You can automatically get the latest deployment scripts and more by using the auxiliary file storage feature of the [Intel® MPI Library](https://software.intel.com/en-us/mpi-library). 
 The feature is enabled when you run the scripts/aws_impi.sh deployment script for Intel® MPI Library. 
 
