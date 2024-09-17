@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Copyright © 2019 Intel Corporation
 # SPDX-License-Identifier: MIT
@@ -86,6 +86,11 @@ do
     esac
 done
 
+# Support for oneAPI package layouts
+if [ ! -d "$ROOTDIR/intel64" ]
+then
+    ln -sv "$ROOTDIR" "$ROOTDIR/intel64"
+fi
 
 LIBDIR="$ROOTDIR/intel64/lib"
 BINDIR="$ROOTDIR/intel64/bin"
@@ -93,7 +98,7 @@ INCDIR="$ROOTDIR/intel64/include"
 ETCDIR="$ROOTDIR/intel64/etc"
 
 
-if [ ! -d $LIBDIR ] || [ ! -d $BINDIR] || [ ! -d $INCDIR ] || [ ! -d $ETCDIR ]
+if [ ! -d $LIBDIR ] || [ ! -d $BINDIR ] || [ ! -d $INCDIR ] || [ ! -d $ETCDIR ]
 then
     echo
     echo "ERROR: Unexpected structure of $ROOTDIR directory. Please provide correct path to IMPI installation."
@@ -101,7 +106,6 @@ then
     help $0 -1
 fi
 
-if [! -d intel64/bin]
 [ $SILENT == true ] && { exec > /dev/null ; }
 
 cd $ROOTDIR
